@@ -8,6 +8,7 @@ package edu.uqu.cs;
 * Make sure to complete and submit your lab
 */
 
+import java.util.Scanner;
 
 public class App{
 
@@ -44,9 +45,11 @@ public class App{
 */
  
     public static void main(String [] args) {
-        
+       Scanner input=new scanner(System.in);
 
-        /* Write your code here */
+       twisters();
+
+       /* Write your code here */
      
        //call method twisters()
        //prompt user to enter a string 
@@ -54,5 +57,27 @@ public class App{
 
 
     }
+    
+
+     public static void twisters(){
+
+      for(int n=0;n<110;n++){
+
+        if(n%2 ==0){
+            System.out.print("Tweetle");
+        }else if(n%4 ==0){
+            System.out.print("Beetle");
+        }else if(n%6 ==0){
+            System.out.print("Beetle");
+        }else{
+            System.out.print(n);
+        }
+
+
+      }
+
+    }
+     
+
 
 }
