@@ -8,8 +8,8 @@ package edu.uqu.cs;
 * Make sure to complete and submit your lab
 */
 
-import java.util.Scanner;
 
+import java.util.Scanner;
 public class App{
 
 /**  
@@ -44,40 +44,96 @@ public class App{
 *
 */
  
+    public static void twisters(){
+
+       for(int i=1;i<=20;i++){
+         
+         if(i%2==0 || i%4==0 || i%6==0){
+             
+            if(i%2==0){
+                System.out.print("Tweetle");
+              }
+
+            if(i%4==0){
+                System.out.print("Beetle");
+              }
+
+            if(i%6==0){
+                System.out.print("Poodle");
+              }
+  
+         }else{
+            
+            System.out.print(i);
+         }
+
+         System.out.print(" ");
+
+       } 
+          
+    }
+
+
+
+
     public static void main(String [] args) {
-       Scanner input=new scanner(System.in);
+       
 
        twisters();
 
        /* Write your code here */
-     
+       Scanner input = new Scanner(System.in);
+
+       String str= input.nextLine();
+
+       phoneKeypad(str);
        //call method twisters()
        //prompt user to enter a string 
        //call method phoneKeypad(string)
 
 
     }
-    
+         
+          
+    public static void phoneKeypad(String str){
+      String output="";    
+      for(int i=1; i<str.length(); i++){
+         
+        char c= str.toUpperCase().charAt(i);
+        switch(c){
 
-     public static void twisters(){
-
-      for(int n=0;n<110;n++){
-
-        if(n%2 ==0){
-            System.out.print("Tweetle");
-        }else if(n%4 ==0){
-            System.out.print("Beetle");
-        }else if(n%6 ==0){
-            System.out.print("Beetle");
-        }else{
-            System.out.print(n);
-        }
-
-
+          case 'A' :case 'B' :case 'C':
+          output+='2';
+          break;
+          case 'D' :case 'E' :case 'F':
+          output+='3';
+          break;
+          case 'G' :case 'H' :case 'I':
+          output+='4';
+          break;
+          case 'J' :case 'K' :case 'L':
+          output+='5';
+          break;
+          case 'M' :case 'N' :case 'O':
+          output+='6';
+          break;
+          case 'P' :case 'Q' :case 'R' :case 'S':
+          output+='7';
+          break;
+          case 'T' :case 'U' :case 'V':
+          output+='8';
+          break;
+          case 'W' :case 'X' :case 'Y' :case 'Z':
+          output+='9';
+          break;
+          
+       }
       }
+         System.out.print(output);
+
+}
+
+
 
     }
      
-
-
-}
